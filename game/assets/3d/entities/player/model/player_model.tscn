@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://dressri8afjwy"]
+
+[ext_resource type="PackedScene" uid="uid://c6250njm10kg" path="res://assets/3d/entities/player/model/player_model.glb" id="1_slsh4"]
+
+[node name="player_model" instance=ExtResource("1_slsh4")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/rotation = Quaternion(5.06708e-09, 0.997745, -0.0671156, -7.53277e-08)
+bones/2/rotation = Quaternion(0.18203, -1.12909e-16, 1.59135e-08, 0.983293)
+bones/3/rotation = Quaternion(-0.0904214, -1.18721e-07, 2.87418e-09, 0.995904)
+bones/4/rotation = Quaternion(-0.0326097, -0.0921962, -0.849505, 0.518438)
+bones/4/scale = Vector3(1, 1, 1)
+bones/5/rotation = Quaternion(-0.0571981, -0.00030705, 0.0256681, 0.998033)
+bones/5/scale = Vector3(1, 1, 1)
+bones/6/rotation = Quaternion(0.0627431, 0.000899309, -0.327951, 0.942608)
+bones/6/scale = Vector3(1, 1, 1)
+bones/7/rotation = Quaternion(0.0460895, 0.0126034, 0.113973, 0.992334)
+bones/8/rotation = Quaternion(-0.0326098, 0.0921962, 0.849505, 0.518438)
+bones/9/rotation = Quaternion(-0.0571981, 0.000307036, -0.0256681, 0.998033)
+bones/9/scale = Vector3(1, 1, 1)
+bones/10/rotation = Quaternion(0.0627431, -0.000899309, 0.327951, 0.942608)
+bones/10/scale = Vector3(1, 1, 1)
+bones/11/rotation = Quaternion(0.0460895, -0.0126034, -0.113973, 0.992334)
+bones/12/rotation = Quaternion(-5.85242e-05, 0.216871, 0.9762, -0.000692001)
+bones/13/rotation = Quaternion(-0.314492, 1.18966e-05, -0.000694401, 0.94926)
+bones/14/rotation = Quaternion(0.688717, 3.40898e-08, 1.16944e-07, 0.72503)
+bones/14/scale = Vector3(1, 1, 1)
+bones/15/rotation = Quaternion(5.84078e-05, 0.216871, 0.9762, 0.000691975)
+bones/16/rotation = Quaternion(-0.314492, -1.18597e-05, 0.000694346, 0.94926)
+bones/17/rotation = Quaternion(0.688717, -3.416e-08, -1.17018e-07, 0.72503)
+bones/17/scale = Vector3(1, 1, 1)

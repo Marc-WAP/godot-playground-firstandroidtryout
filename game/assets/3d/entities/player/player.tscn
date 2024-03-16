@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://covxr8y3mxy7e"]
+
+[ext_resource type="Script" path="res://assets/3d/entities/player/player.gd" id="1_0su4f"]
+[ext_resource type="PackedScene" uid="uid://dressri8afjwy" path="res://assets/3d/entities/player/model/player_model.tscn" id="1_n34u1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_yhl85"]
+size = Vector3(0.54, 0.8, 0.25)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_yjjs8"]
+points = PackedVector3Array(0.260763, 0.374906, 0.125, -0.263046, -0.386999, -0.125, 0.269078, -0.386999, -0.125, -0.263046, 0.386999, -0.125, -0.254732, -0.374906, 0.125, 0.269078, 0.386999, -0.125, 0.260763, -0.374906, 0.125, -0.254732, 0.374906, 0.125)
+
+[node name="Player" type="RigidBody3D"]
+lock_rotation = true
+linear_damp = 3.0
+script = ExtResource("1_0su4f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.382714, -0.046)
+visible = false
+mesh = SubResource("BoxMesh_yhl85")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.382714, -0.046)
+shape = SubResource("ConvexPolygonShape3D_yjjs8")
+
+[node name="player_model" parent="." instance=ExtResource("1_n34u1")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)

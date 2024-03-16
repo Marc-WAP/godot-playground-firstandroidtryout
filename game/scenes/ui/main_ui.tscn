@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=3 uid="uid://dac37emm6vhsm"]
+
+[ext_resource type="Script" path="res://scenes/ui/main_ui.gd" id="1_5jy5g"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="2_udeb1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hrs22"]
+font_size = 36
+
+[sub_resource type="LabelSettings" id="LabelSettings_st4ry"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_qw12x"]
+font_size = 42
+
+[node name="MainUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5jy5g")
+
+[node name="MainMarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="MainMarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="LabelScore" type="Label" parent="MainMarginContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Score:"
+label_settings = SubResource("LabelSettings_hrs22")
+
+[node name="LabelFooter" type="Label" parent="MainMarginContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "Super awesome game!"
+label_settings = SubResource("LabelSettings_st4ry")
+
+[node name="LabelTitle" type="Label" parent="MainMarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "FirstAndroidTryout"
+label_settings = SubResource("LabelSettings_qw12x")
+
+[node name="Virtual Joystick" parent="." instance=ExtResource("2_udeb1")]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -322.0
+offset_top = -310.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+joystick_mode = 1
+visibility_mode = 1
+action_left = "move_left"
+action_right = "move_right"
+action_up = "move_forward"
+action_down = "move_back"

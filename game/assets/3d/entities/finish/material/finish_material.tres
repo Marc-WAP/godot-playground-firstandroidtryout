@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bp864e5bsugcw"]
+
+[ext_resource type="Texture2D" uid="uid://bsdqc2b8h8bhk" path="res://assets/3d/entities/finish/material/texture.svg" id="1_ij042"]
+
+[resource]
+albedo_texture = ExtResource("1_ij042")
+heightmap_scale = 4.03
+subsurf_scatter_strength = 1.0
+uv1_scale = Vector3(20, 5, 1)
+grow_amount = -3.879

@@ -1,0 +1,99 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3mvhe2sss4u0"]
+
+[ext_resource type="PackedScene" uid="uid://d1dethrpwtgbo" path="res://assets/3d/entities/level_base/level_base.tscn" id="1_2v6pu"]
+[ext_resource type="Script" path="res://scenes/levels/level_02/level_02.gd" id="1_j3ljm"]
+[ext_resource type="PackedScene" uid="uid://c7s8sxr4n3mp7" path="res://assets/3d/entities/gates/gate.tscn" id="3_4fw7l"]
+[ext_resource type="PackedScene" uid="uid://ctvhtmhd34g0d" path="res://assets/3d/entities/finish/finish.tscn" id="4_0d83j"]
+
+[node name="Level02" type="Node3D"]
+script = ExtResource("1_j3ljm")
+
+[node name="LevelBase" parent="." instance=ExtResource("1_2v6pu")]
+metadata/level_number = 2
+
+[node name="Gates" type="Node3D" parent="."]
+
+[node name="Gate_01" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -6)
+
+[node name="Gate_02" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, -6)
+
+[node name="Gate_03" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -9)
+metadata/is_positive = true
+
+[node name="Gate_04" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, -9)
+
+[node name="Gate_05" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -12)
+
+[node name="Gate_06" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, -12)
+metadata/is_positive = true
+
+[node name="Gate_07" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -15)
+
+[node name="Gate_08" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, -15)
+metadata/is_positive = true
+
+[node name="Gate_09" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -18)
+
+[node name="Gate_10" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, -18)
+
+[node name="Gate_11" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -21)
+metadata/is_positive = true
+
+[node name="Gate_12" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, -21)
+metadata/is_positive = true
+
+[node name="Gate_13" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -24)
+metadata/is_positive = true
+
+[node name="Gate_14" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, -24)
+
+[node name="Gate_15" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -27)
+metadata/is_positive = true
+
+[node name="Gate_16" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, -27)
+
+[node name="Gate_17" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -30)
+
+[node name="Gate_18" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, -30)
+
+[node name="Gate_19" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -33)
+
+[node name="Gate_20" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, -33)
+metadata/is_positive = true
+
+[node name="Gate_21" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -36)
+
+[node name="Gate_22" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, -36)
+metadata/is_positive = true
+
+[node name="Gate_23" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -39)
+metadata/is_positive = true
+
+[node name="Gate_24" parent="Gates" instance=ExtResource("3_4fw7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 0, -39)
+
+[node name="Finish" parent="." instance=ExtResource("4_0d83j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -47)

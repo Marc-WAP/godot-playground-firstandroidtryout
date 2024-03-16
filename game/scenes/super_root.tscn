@@ -1,0 +1,46 @@
+[gd_scene load_steps=9 format=3 uid="uid://cp3w5mcc1f4hi"]
+
+[ext_resource type="Script" path="res://scenes/state_manager.gd" id="1_nc18u"]
+[ext_resource type="PackedScene" uid="uid://dac37emm6vhsm" path="res://scenes/ui/main_ui.tscn" id="1_xxef1"]
+[ext_resource type="PackedScene" uid="uid://q8vhfp012n32" path="res://scenes/finish_screen/finish_screen.tscn" id="2_reekr"]
+[ext_resource type="PackedScene" uid="uid://covxr8y3mxy7e" path="res://assets/3d/entities/player/player.tscn" id="3_7ccvx"]
+[ext_resource type="PackedScene" uid="uid://63jnvsxvln6c" path="res://scenes/levels/level_manager.tscn" id="4_g246s"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_b8ab7"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_0ctcn"]
+sky_material = SubResource("ProceduralSkyMaterial_b8ab7")
+
+[sub_resource type="Environment" id="Environment_m0bcu"]
+background_mode = 2
+sky = SubResource("Sky_0ctcn")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="SuperRoot" type="Node3D"]
+script = ExtResource("1_nc18u")
+
+[node name="FinishScreen" parent="." instance=ExtResource("2_reekr")]
+visible = false
+
+[node name="MainUi" parent="." instance=ExtResource("1_xxef1")]
+
+[node name="Player" parent="." instance=ExtResource("3_7ccvx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, -0.5)
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 1, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_m0bcu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.865325, -0.384995, 0.320923, 0.499162, -0.719804, 0.48241, 0.0452761, 0.577634, 0.815039, 9.13351, 1.16156, -4.27605)
+shadow_enabled = true
+
+[node name="LevelManager" parent="." instance=ExtResource("4_g246s")]
+
+[node name="PlayerStartPoint" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, -0.5)
