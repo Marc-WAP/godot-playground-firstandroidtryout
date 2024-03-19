@@ -18,7 +18,4 @@ func _process(delta):
 	else:
 		animator.play("Walk")
 
-	var inn :Vector3 = input.normalized()
-	inn.y = 0
-
-	apply_central_force(inn * move_speed * delta)
+	apply_central_force(input.normalized() * move_speed * delta)
